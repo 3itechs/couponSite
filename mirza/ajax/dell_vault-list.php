@@ -1,0 +1,7 @@
+<?php 
+include "../includes/DB.php";
+$db= new DB();
+if (isset($_GET["sid"])) { $sid=trim($_GET["sid"]); }	   
+      $sql_admin = "DELETE FROM vault_list  WHERE sid = '$sid'";	
+        $rs_admin = $db->ExecuteQuery($sql_admin);	
+$db->closeConnection(); ?>

@@ -1,0 +1,8 @@
+#AddType x-mapp-php5 .php .html .js .css
+#AddHandler x-mapp-php5 .php .html .js .css
+AddType text/css .css
+RewriteEngine On
+
+Options +FollowSymLinks
+
+RewriteBase /

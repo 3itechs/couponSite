@@ -1,0 +1,1 @@
+$('#'+mysid).typeahead({ local: ["NET-A-PORTER","Viator","Viator Australia","Viator Canada","Viator France","Viator Germany","Viator Singapore","Viator UK"]});

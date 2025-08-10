@@ -1,0 +1,99 @@
+RewriteEngine On 
+  
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ------- Redirect kscoupon to localhost/kscoupon ---
+Rewritecond %{http_host} ^kscoupon  
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*) https://www.kscoupon.com/$1 [R=301,L] 
+
+# ------- Redirect every .php to .html  ---
+RewriteCond %{THE_REQUEST} (\.php) [NC] 
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)\.php$ https://www.kscoupon.com/$1.html [L,R=301]
+
+# ------- Redirect localhost/kscoupon/index.html to localhost/kscoupon ---
+RewriteCond %{THE_REQUEST} (index\.html) [NC] 
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)index\.html$ https://www.kscoupon.com/$1 [L,R=301] 
+
+# Url masking for stores.php   as stores/ 
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^stores.html$ stores-list.php [NC,L]
+
+# Url masking for categories-list.php   as categories/ 
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^categories.html$ categories-list.php [NC,L]
+
+# Url masking for categories.php   as categories/
+#RewriteRule ^categories.html/$ categories.html [L,R=301]
+
+# URL Masking for category Detail Page
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^categories/(.*)$ category.php?curl=$1 [NC,L]
+
+#RewriteRule ^stores/(.*)-discount-coupon-codes.html$ 
+     
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^coupons/(.*)$ store.php?surl=$1 [NC,L]
+
+ # RewriteCond %{REQUEST_FILENAME} !-f
+ # RewriteCond %{REQUEST_URI} !(.*)/$
+ # RewriteRule ^stores/(.*)$ https://www.kscoupon.com/stores/$1/ [L,R=301]
+
+# RewriteRule ^(.*)-coupon-code.html$ store.php?surl=$1 [L]
+
+#RewriteRule ^404$ 404.php?url=$1 [L]
+
+# Url masking for  freeshipping.php  and  
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^freeshipping.html$ freeshipping.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^expiringoffers.html$ expiringoffers.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^out.html$ out.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^popup.html$ popup.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^privacypolicy.html$ privacypolicy.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^contact-us.html$ contact-us.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^about-us.html$ about-us.php [NC,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^404.html$ 404.php [NC,L]
+
+RewriteRule ^ajax/response.html$ ajax/response.php [NC,L]
+
+# ------------------------------------------------------------------------------
+ 
+ # URL Masking for Search Results Page 
+#RewriteRule ^coupon-(.*)$ /search.php?q=$1 [L] 
+
+ErrorDocument 404 https://www.kscoupon.com/404.html
+
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)\.html$ $1.php [L]
+
+# ------------------------------------------------------------------------------
+
+       

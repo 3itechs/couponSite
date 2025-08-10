@@ -1,0 +1,2 @@
+AuthName "ajax"
+AuthUserFile "/mnt/disk/couponclix/.htpasswds/public_html/ajax/passwd"
