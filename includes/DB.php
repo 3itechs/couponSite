@@ -7,29 +7,29 @@
 	 	
   if(stristr($_SERVER['HTTP_HOST'],'localhost'))
     {
-	define('DOMAIN', 'http://viatorcouponcodes.com'); 
-	define('HOST_VAR', 'http://viatorcouponcodes.com');
+	define('DOMAIN', 'https://www.promosplusdeals.com'); 
+	define('HOST_VAR', 'https://www.promosplusdeals.com');
 	define('DOMAINVAR', 'http://
 		/kscoupon'); 	
-	define('MEDIA', 'http://viatorcouponcodes.com/assets/images');	
-	define('IMGPATH', 'http://viatorcouponcodes.com/assets/images');
+	define('MEDIA', 'https://www.promosplusdeals.com/assets/images');	
+	define('IMGPATH', 'https://www.promosplusdeals.com/assets/images');
 	
-	DEFINE("DB_USER_ID","u809018165_dani");
-	DEFINE("DB_USER_PWD","Kami@121");
-	DEFINE("DATABASE","u809018165_dani");
+	DEFINE("DB_USER_ID","fasi");
+	DEFINE("DB_USER_PWD","Voliom@12121");
+	DEFINE("DATABASE","traveldi_coupons");
 	DEFINE("DBDOMAIN","localhost");  
  	 
 	 }else{ 
 	 
-	define('DOMAIN', 'https://www.viatorcouponcodes.com'); 
-	define('HOST_VAR', 'https://www.viatorcouponcodes.com');
-	define('DOMAINVAR', 'https://www.viatorcouponcodes.com'); 	
-	define('MEDIA', 'https://www.viatorcouponcodes.com/assets/images');	
+	define('DOMAIN', 'https://www.promosplusdeals.com'); 
+	define('HOST_VAR', 'https://www.promosplusdeals.com');
+	define('DOMAINVAR', 'https://www.promosplusdeals.com'); 	
+	define('MEDIA', 'https://www.promosplusdeals.com/assets/images');	
 	define('IMGPATH', $_SERVER['DOCUMENT_ROOT'].'/assets/images');
 	
-	DEFINE("DB_USER_ID","u809018165_dani");
-	DEFINE("DB_USER_PWD","Kami@121");
-	DEFINE("DATABASE","u809018165_dani");
+	DEFINE("DB_USER_ID","fasi");
+	DEFINE("DB_USER_PWD","Voliom@12121");
+	DEFINE("DATABASE","traveldi_coupons");
 	DEFINE("DBDOMAIN","localhost");
 	  
   } 
