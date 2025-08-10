@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/traveldi/public_html/
-    - /bin/cp -R repositories/couponSite/* $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
