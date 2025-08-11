@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/traveldi/promoplusdeals.com/
+    - export DEPLOYPATH=/home2/traveldi/promosplusdeals.com/
     - /bin/cp -R * $DEPLOYPATH
