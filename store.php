@@ -195,7 +195,7 @@ $store_url=DOMAINVAR."/coupons/".$store_url; if($product_image!='' && file_exist
 
 
 
-	<?php include("includes/footer.php");?>
+	
 <?php include("includes/jscript.php"); ?>
 <script type="text/javascript">         
         
@@ -321,11 +321,4 @@ $store_url=DOMAINVAR."/coupons/".$store_url; if($product_image!='' && file_exist
       </div>
 </div>
     </div>
-<!-- /.modal -->
-
-
-
-
-
-  </body>
-</html>
+  <?php include("includes/footer.php");?>
