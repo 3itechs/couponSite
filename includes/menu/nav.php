@@ -1,4 +1,4 @@
-<?php
+
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" id="ftco-navbar" style="background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);">
     <div class="container">
         <a class="navbar-brand font-weight-bold text-uppercase d-flex align-items-center" href="<?php echo DOMAINVAR;?>">
