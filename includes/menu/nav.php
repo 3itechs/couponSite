@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" id="ftco-navbar" style="background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);">
     <div class="container">
         <a class="navbar-brand font-weight-bold text-uppercase d-flex align-items-center" href="<?php echo DOMAINVAR;?>">
-            <img src="<?php echo DOMAINVAR;?>/assets/images/logo.png" alt="Logo" style="height:38px; margin-right:10px; border-radius:8px; box-shadow:0 2px 8px rgba(30,60,114,0.15);">
+            
             promosplusdeals
         </a>
         <form action="#" class="searchform order-sm-start order-lg-last d-flex align-items-center ml-auto mr-3" style="max-width: 320px;">
