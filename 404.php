@@ -31,11 +31,12 @@
                 </div>
                 <div class="col-12 col-sm-6">
                     <div class="four-0-inner">
-                        
-                        <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>OOPS!</h3>
-                        <h6>You did it again..</h6>
-                        <p>The page you are looking doesn’t exist. We think the page may have removed or deleted by the  authors.</p>
-                        <a class="go-back" href="<?php echo DOMAIN;?>/"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</a>
+                        <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> OOPS!</h3>
+                        <h6>You landed on the right page but used a wrong link.</h6>
+                        <p>The page you are looking for doesn’t exist. It may have been removed or the link is incorrect.</p>
+                        <a class="btn btn-warning font-weight-bold mt-3" href="<?php echo DOMAIN;?>/">
+                            <i class="fa fa-home" aria-hidden="true"></i> Go to Home Page
+                        </a>
                     </div>
                 </div>
             </div>
