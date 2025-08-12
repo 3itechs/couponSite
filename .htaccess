@@ -7,21 +7,21 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # ------- Redirect promostrends to localhost/promostrends ---
 Rewritecond %{http_host} ^promostrends  
 RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^(.*) https://www.viatorcouponcodes.com/$1 [R=301,L] 
+RewriteRule ^(.*) https://www.promosplusdeals.com/$1 [R=301,L] 
 
 
-RewriteCond %{HTTPS_HOST} ^viatorcouponcodes.com [NC]
-RewriteRule ^(.*)$ https://www.viatorcouponcodes.com/$1 [L,R=301]
+RewriteCond %{HTTPS_HOST} ^promosplusdeals.com [NC]
+RewriteRule ^(.*)$ https://www.promosplusdeals.com/$1 [L,R=301]
 
 # ------- Redirect every .php to .html  ---
 RewriteCond %{THE_REQUEST} (\.php) [NC] 
 RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^(.*)\.php$ https://www.viatorcouponcodes.com/$1.html [L,R=301]
+RewriteRule ^(.*)\.php$ https://www.promosplusdeals.com/$1.html [L,R=301]
 
 # ------- Redirect localhost/promostrends/index.html to localhost/promostrends ---
 RewriteCond %{THE_REQUEST} (index\.html) [NC] 
 RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^(.*)index\.html$ https://www.viatorcouponcodes.com/$1 [L,R=301] 
+RewriteRule ^(.*)index\.html$ https://www.promosplusdeals.com/$1 [L,R=301] 
 
 # Url masking for stores.php   as stores/ 
 RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
@@ -44,7 +44,7 @@ RewriteRule ^coupons/(.*)$ store.php?surl=$1 [NC,L]
 
  # RewriteCond %{REQUEST_FILENAME} !-f
  # RewriteCond %{REQUEST_URI} !(.*)/$
- # RewriteRule ^stores/(.*)$ https://www.viatorcouponcodes.com/stores/$1/ [L,R=301]
+ # RewriteRule ^stores/(.*)$ https://www.promosplusdeals.com/stores/$1/ [L,R=301]
 
 # RewriteRule ^(.*)-coupon-code.html$ store.php?surl=$1 [L]
 
@@ -76,7 +76,7 @@ RewriteRule ^ajax/response.html$ ajax/response.php [NC,L]
  # URL Masking for Search Results Page 
 #RewriteRule ^coupon-(.*)$ /search.php?q=$1 [L] 
 
-ErrorDocument 404 https://www.viatorcouponcodes.com/404.html
+ErrorDocument 404 https://www.promosplusdeals.com/404.html
 
 RewriteRule ^(.*)\.html$ $1.php [L]
 
