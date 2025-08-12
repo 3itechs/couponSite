@@ -41,7 +41,44 @@
 			</div>
 		</div>
 	</section>
-    
+    <?php
+// ...existing code...
+ 
+  
+  <!-- Latest Coupons Section -->
+  <section class="latest-coupon-area">
+      <div class="container-fluid custom-width">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h2 class="section-title">Latest Coupons</h2>
+                      <?php
+                      $sql_latest = "SELECT s.store_id, s.storename, s.store_url, s.store_logo, c.tracking_link, 
+                          DATE_FORMAT(c.exp_date,'%M %d, %Y') as exp_date,
+                          DATE_FORMAT(c.start_date,'%b %d, %Y') as start_date,
+                          c.coupon_code, c.coupon_desc, c.couponname, c.discount_type, c.discount_value, c.currency, 
+                          c.coupon_id, c.coupon_type, c.product_image, s.status, 
+                          DATE_FORMAT(c.added_date,'%b %d, %Y') as added_date,
+                          c.insert_type, c.username, c.exclusive, c.votey, c.voten, c.used_total
+                          FROM stores s, coupons c
+                          WHERE s.store_id = c.store_id
+                          AND c.status = 1
+                          AND (c.exp_date >= CURDATE() OR c.exp_date = '0000-00-00')
+                          ORDER BY c.added_date DESC
+                          LIMIT 9";
+                      $rs_latest = $db->ExecuteQuery($sql_latest);
+                      while(list($store_id, $storename, $store_url, $store_logo, $html_code, $exp_date, $start_date, $coupon_code, $desc, $couponname, $discount_type, $discount_value, $currency, $coupon_id, $coupon_type, $product_image, $store_status, $added_date, $insert_type, $username, $exclusive, $votey, $voten, $used_total) = $db->FetchAsArray($rs_latest)) {
+                          include("includes/coupon.php");
+                      }
+                      ?>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- End Latest Coupons Section -->
+// ...existing code...
+
     <section class="coupon-area">
         <div class="container-fluid custom-width">
          <div class="container">                
