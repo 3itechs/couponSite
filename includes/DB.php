@@ -14,7 +14,7 @@
 	define('MEDIA', 'https://www.promosplusdeals.com/assets/images');	
 	define('IMGPATH', 'https://www.promosplusdeals.com/assets/images');
 	
-	DEFINE("DB_USER_ID","fasi");
+	DEFINE("DB_USER_ID","traveldi_fasi");
 	DEFINE("DB_USER_PWD","Voliom@12121");
 	DEFINE("DATABASE","traveldi_coupons");
 	DEFINE("DBDOMAIN","localhost");  
@@ -27,7 +27,7 @@
 	define('MEDIA', 'https://www.promosplusdeals.com/assets/images');	
 	define('IMGPATH', $_SERVER['DOCUMENT_ROOT'].'/assets/images');
 	
-	DEFINE("DB_USER_ID","fasi");
+	DEFINE("DB_USER_ID","traveldi_fasi");
 	DEFINE("DB_USER_PWD","Voliom@12121");
 	DEFINE("DATABASE","traveldi_coupons");
 	DEFINE("DBDOMAIN","localhost");
