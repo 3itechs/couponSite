@@ -4,25 +4,25 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 pr-md-5">
-            <a href="#" class="footer-site-logo d-block mb-4">ViatorCouponCodes</a>
-            <p>Get latest Coupon codes and deals for Viator at viatorcouponcodes.com</p>
+            <a href="#" class="footer-site-logo d-block mb-4">PromosPlusDeals</a>
+            <p>Get latest Coupon codes and deals for Viator at promosplusdeals.com</p>
           </div>
           <div class="col-md">
             <h3>Discover</h3>
             <ul class="list-unstyled nav-links">
-              <li><a href="https://www.viatorcouponcodes.com">Home</a></li>
-              <li><a href="https://www.viatorcouponcodes.com/about-us.html">About Us</a></li>
+              <li><a href="https://www.promosplusdeals.com">Home</a></li>
+              <li><a href="https://www.promosplusdeals.com/about-us.html">About Us</a></li>
               
-              <li><a href="https://www.viatorcouponcodes.com/categories.html">Categories</a></li>
+              <li><a href="https://www.promosplusdeals.com/categories.html">Categories</a></li>
             </ul>
           </div>
 
           <div class="col-md">
             <h3>Legal Info</h3>
             <ul class="list-unstyled nav-links">
-              <li><a href="https://www.viatorcouponcodes.com/privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="https://www.viatorcouponcodes.com/terms.html">Terms &amp; Conditions</a></li>
-              <li><a href="https://www.viatorcouponcodes.com/stores.html">Partners</a></li>
+              <li><a href="https://www.promosplusdeals.com/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="https://www.promosplusdeals.com/terms.html">Terms &amp; Conditions</a></li>
+              <li><a href="https://www.promosplusdeals.com/stores.html">Partners</a></li>
             </ul>
           </div>
           <div class="col-md">
