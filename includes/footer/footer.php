@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-4 mb-4 mb-md-0">
                 <a href="#" class="footer-site-logo d-flex align-items-center mb-3" style="font-size: 2rem; font-weight: bold; color: #ffd700; letter-spacing: 1px; text-decoration:none;">
-                    <img src="<?php echo DOMAINVAR;?>/assets/images/logo.png" alt="Logo" style="height:40px; margin-right:12px; border-radius:8px; box-shadow:0 2px 8px rgba(30,60,114,0.15);">
+                    
                     PromosPlusDeals
                 </a>
                 <p style="color: #e0e0e0;">Get the latest coupon codes and deals for your favorite stores at promosplusdeals.com</p>
