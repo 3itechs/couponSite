@@ -21,8 +21,8 @@
 	DEFINE("DBDOMAIN","localhost"); 
 	 }else{ 
 	 
-     define('DOMAIN', 'https://www.viatorcouponcodes.com'); 
-	define('DOMAINVAR', 'https://www.viatorcouponcodes.com/mirza'); 	
+     define('DOMAIN', 'https://www.promosplusdeals.com'); 
+	define('DOMAINVAR', 'https://www.promosplusdeals.com/mirza'); 	
 	define('MEDIA', 'https://www.viatorcouponcodes.com/mirza/images');	
 	define('IMGPATH', $_SERVER['DOCUMENT_ROOT'].'/assets/images');
 	define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);

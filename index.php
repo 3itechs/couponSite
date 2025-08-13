@@ -75,25 +75,29 @@
     <!-- End Latest Coupons Section -->
     <section class="coupon-area">
         <div class="container-fluid custom-width">
-         <div class="container">                
-            <div class="row">
-
-                <div class="col-lg-12">
-                    
-                    <?php $sql_trending = "select s.store_id, s.storename, s.store_url, s.store_logo, c.tracking_link, date_format(c.exp_date,'%M %d, %Y') as exp_date ,date_format(c.start_date,'%b %d, %Y') as start_date, c.coupon_code, c.coupon_desc, c.couponname, c.discount_type, c.discount_value, c.currency, c.coupon_id,c.coupon_type, c.product_image, s.status,date_format(c.added_date,'%b %d, %Y') as added_date ,c.insert_type,c.username,c.exclusive, c.votey, c.voten, c.used_total from stores s, coupons c where s.store_id = c.store_id and c.feature = 1 and (c.exp_date >= CURDATE() or c.exp_date = 000-00-00) ORDER BY c.added_date DESC LIMIT 9"; 
-                    $rs_trending = $db->ExecuteQuery($sql_trending); 
-                    while(list($store_id, $storename, $store_url, $store_logo, $html_code, $exp_date, $start_date, $coupon_code, $desc, $couponname, $discount_type, $discount_value, $currency, $coupon_id, $coupon_type, $product_image, $store_status, $added_date ,$insert_type, $username, $exclusive, $votey, $voten, $used_total) = $db->FetchAsArray($rs_trending)){  ?>
-                    
-                    <?php include("includes/coupon.php");?>
-                    <?php }?>
-                    
-                    
+            <div class="container">                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="section-title" style="font-weight:700; letter-spacing:1px; color:#1e3c72; margin-bottom:2.2rem;">
+                            Trending Coupons
+                        </h2>
+                        <div class="row" id="trending-coupons-list">
+                        <?php 
+                        $sql_trending = "select s.store_id, s.storename, s.store_url, s.store_logo, c.tracking_link, date_format(c.exp_date,'%M %d, %Y') as exp_date ,date_format(c.start_date,'%b %d, %Y') as start_date, c.coupon_code, c.coupon_desc, c.couponname, c.discount_type, c.discount_value, c.currency, c.coupon_id,c.coupon_type, c.product_image, s.status,date_format(c.added_date,'%b %d, %Y') as added_date ,c.insert_type,c.username,c.exclusive, c.votey, c.voten, c.used_total from stores s, coupons c where s.store_id = c.store_id and c.feature = 1 and (c.exp_date >= CURDATE() or c.exp_date = 000-00-00) ORDER BY c.added_date DESC LIMIT 9"; 
+                        $rs_trending = $db->ExecuteQuery($sql_trending); 
+                        while(list($store_id, $storename, $store_url, $store_logo, $html_code, $exp_date, $start_date, $coupon_code, $desc, $couponname, $discount_type, $discount_value, $currency, $coupon_id, $coupon_type, $product_image, $store_status, $added_date ,$insert_type, $username, $exclusive, $votey, $voten, $used_total) = $db->FetchAsArray($rs_trending)){  ?>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="coupon-card shadow-sm h-100 d-flex flex-column justify-content-between" style="border-radius:18px; background:#fff; transition:box-shadow 0.2s, transform 0.2s;">
+                                    <?php include("includes/coupon.php");?>
+                                </div>
+                            </div>
+                        <?php }?>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-         </div>
-      </div>
-  </section>
+        </div>
+    </section>
 <?php include("includes/footer.php");?>
 <?php include("includes/jscript.php");?>
 <script src="<?php echo DOMAINVAR;?>/assets/js/owl.carousel.js"></script>
