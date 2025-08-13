@@ -1,3 +1,8 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <?php  include "includes/DB.php";  $metas = $db->getPageMetas(1); 
  $pieces = explode("?", $_SERVER['REQUEST_URI']);
  
